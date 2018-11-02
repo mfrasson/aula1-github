@@ -27,10 +27,11 @@ public class ProgramProduct {
 		
 		for( int i = 1; i <= n; i++ ) {
 			System.out.println("Product #" + i + " data:");
-			System.out.print("Common, user or imported (c/u/i)?");
+			System.out.print("Common, user or imported (c/u/i)? ");
 			char ch = sc.next().charAt(0);
 			System.out.print("Name: ");
-			String name = sc.next();
+			sc.nextLine();
+			String name = sc.nextLine();
 			System.out.print("Price: ");
 			double price = sc.nextDouble();
 			if( ch == 'i' ) {
@@ -51,7 +52,7 @@ public class ProgramProduct {
 		System.out.println();
 		System.out.println("PRICE TAGS: ");
 		for(Product p : list)
-			p.priceTag();
+			System.out.println( p.priceTag() );
 		
 		sc.close();
 	}
